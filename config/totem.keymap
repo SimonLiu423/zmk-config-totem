@@ -21,115 +21,13 @@
 #define TVP1 4
 #define TVP2 5
 
-&mt {
-    quick-tap-ms = <100>;
-    global-quick-tap;
-    flavor = "tap-preferred";
-    tapping-term-ms = <170>;
-};
-
 / {
     combos {
         compatible = "zmk,combos";
 
-        c1 {
-            bindings = <&kp LSHIFT>;
-            key-positions = <21 22 23>;
-        };
-
-        c2 {
-            bindings = <&kp RIGHT>;
-            key-positions = <12 13>;
-        };
-
-        c3 {
-            bindings = <&kp LEFT>;
-            key-positions = <12 11>;
-        };
-
-        c4 {
-            bindings = <&kp UP>;
-            key-positions = <12 1>;
-        };
-
-        c5 {
-            bindings = <&kp DOWN>;
-            key-positions = <12 22>;
-        };
-    };
-
-    behaviors {
-        td0: td0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD0";
-            #binding-cells = <0>;
-            bindings = <&mt0 1 SPACE>, <&mt LCTRL ESCAPE>;
-
-            tapping-term-ms = <170>;
-        };
-
-        mt0: mt0 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MT0";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <170>;
-            hold-trigger-key-positions = <33>;
-        };
-
-        mt1: mt1 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MT1";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <170>;
-            hold-trigger-key-positions = <36>;
-        };
-
-        td1: td1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD1";
-            #binding-cells = <0>;
-            bindings = <&mt1 1 SPACE>, <&mt CAPSLOCK RSHFT>;
-
-            tapping-term-ms = <170>;
-        };
-
-        td2: td2 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "TD2";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            hold-trigger-key-positions = <34>;
-        };
-
-        td3: td3 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD3";
-            #binding-cells = <0>;
-            bindings = <&mt RS(P) P>, <&mt QUESTION SLASH>;
-        };
-
-        td4: td4 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD4";
-            #binding-cells = <0>;
-            bindings = <&mt COLON SEMICOLON>, <&mt SQT DOUBLE_QUOTES>;
-
-            tapping-term-ms = <200>;
-        };
-
-        td5: td5 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD5";
-            #binding-cells = <0>;
-            bindings = <&mt LS(Q) Q>, <&mt TILDE GRAVE>;
-
-            tapping-term-ms = <200>;
+        Toggle_Layer {
+            bindings = <&tog 1>;
+            key-positions = <16 17 18>;
         };
     };
 
@@ -155,10 +53,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-         &td5        &kp W         &kp E              &kp R  &kp T         &kp Y                      &kp U  &kp I                &kp O    &td3
-         &bt BT_CLR  &bt BT_SEL 0  &kp D              &kp F  &kp G         &kp H                      &kp J  &kp K                &kp L    &td4
-&kp TAB  &kp Z       &kp X         &kp C              &kp V  &kp B         &kp N                      &kp M  &kp COMMA            &kp DOT  &kp FSLH  &kp DELETE
-                                   &mt LWIN LEFT_ALT  &td0   &td2 1 ENTER  &mt RIGHT_SHIFT BACKSPACE  &td1   &mt RIGHT_ALT RSHFT
+         &kp Q  &kp W  &kp E  &kp R      &kp T         &kp Y              &kp U  &kp I      &kp O    &kp P
+         &kp A  &kp S  &kp D  &kp F      &kp G         &kp H              &kp J  &kp K      &kp L    &kp SEMICOLON
+&kp TAB  &kp Z  &kp X  &kp C  &kp V      &kp B         &kp N              &kp M  &kp COMMA  &kp DOT  &kp FSLH       &kp ENTER
+                       &none  &kp SPACE  &kp LEFT_GUI  &kp RIGHT_COMMAND  &none  &none
             >;
         };
 
