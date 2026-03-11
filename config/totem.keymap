@@ -25,14 +25,14 @@
     combos {
         compatible = "zmk,combos";
 
-        Toggle_Layer {
-            bindings = <&tog 0>;
-            key-positions = <16 17 18>;
-        };
-
         delete {
             bindings = <&kp DELETE>;
             key-positions = <28 29>;
+        };
+
+        backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <17 18>;
         };
     };
 
