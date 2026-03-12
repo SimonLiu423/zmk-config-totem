@@ -37,22 +37,22 @@
 
         bt_clear_profile {
             bindings = <&bt BT_CLR>;
-            key-positions = <34 33>;
+            key-positions = <20 11 12 13>;
         };
 
         bt_sel_0 {
             bindings = <&bt BT_SEL 0>;
-            key-positions = <25 24>;
+            key-positions = <25 24 20>;
         };
 
         bt_sel_1 {
             bindings = <&bt BT_SEL 1>;
-            key-positions = <14 13>;
+            key-positions = <14 13 20>;
         };
 
         bt_sel_2 {
             bindings = <&bt BT_SEL 2>;
-            key-positions = <4 3>;
+            key-positions = <4 3 20>;
         };
     };
 
