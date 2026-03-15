@@ -27,12 +27,12 @@
 
         delete {
             bindings = <&kp DELETE>;
-            key-positions = <29 30>;
+            key-positions = <18 19>;
         };
 
         backspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <27 28>;
+            key-positions = <17 16>;
         };
 
         bt_clear_profile {
@@ -63,6 +63,16 @@
         heptabase_highlight {
             bindings = <&hb_hl>;
             key-positions = <22 23 24>;
+        };
+
+        cmd {
+            bindings = <&kp LEFT_COMMAND>;
+            key-positions = <33 34>;
+        };
+
+        alt {
+            bindings = <&kp LEFT_ALT>;
+            key-positions = <35 36>;
         };
     };
 
