@@ -13,4 +13,10 @@ include:
   - board: xiao_ble//zmk
     shield: settings_reset
     artifact-name: totem-settings-reset
+  - board: xiao_ble//zmk
+    shield: totem_left
+    artifact-name: totem-ble-left
+  - board: xiao_ble//zmk
+    shield: totem_right
+    artifact-name: totem-ble-right
 
