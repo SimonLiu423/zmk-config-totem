@@ -88,6 +88,16 @@
             bindings = <&tog 4>;
             key-positions = <0 1 2 3>;
         };
+
+        undo {
+            bindings = <&kp LG(Z)>;
+            key-positions = <0 1>;
+        };
+
+        redo {
+            bindings = <&kp LS(LG(Z))>;
+            key-positions = <2 3>;
+        };
     };
 
     behaviors {
@@ -145,20 +155,6 @@
                 <&kp LCMD &kp LEFT_ALT>;
 
             label = "HB_CONV";
-        };
-
-        cmd: cmd {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_press>,
-                <&kp LCMD &macro_param_1to1>,
-                <&macro_tap>,
-                <&kp MACRO_PLACEHOLDER>,
-                <&macro_release>,
-                <&kp LCMD>;
-
-            label = "CMD";
         };
     };
 
@@ -226,10 +222,10 @@
 
         heptabase {
             bindings = <
-             &hb_conv NUMBER_1  &hb_conv NUMBER_2  &hb_conv NUMBER_3  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-             &hb_conv NUMBER_4  &hb_conv N5        &hb_conv NUMBER_6  &trans  &cmd G  &trans  &trans  &trans  &trans  &trans
-&hb_conv N0  &hb_conv N7        &hb_conv N8        &hb_conv N9        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                                   &trans             &trans  &trans  &trans  &trans  &trans
+             &hb_conv NUMBER_1  &hb_conv NUMBER_2  &hb_conv NUMBER_3  &trans  &trans     &trans  &trans  &trans  &trans  &trans
+             &hb_conv NUMBER_4  &hb_conv N5        &hb_conv NUMBER_6  &trans  &kp LG(G)  &trans  &trans  &trans  &trans  &trans
+&hb_conv N0  &hb_conv N7        &hb_conv N8        &hb_conv N9        &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
+                                                   &trans             &trans  &trans     &trans  &trans  &trans
             >;
 
             label = "HEPTABASE";
