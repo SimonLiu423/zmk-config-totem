@@ -64,7 +64,7 @@
 
         heptabase_highlight {
             bindings = <&hb_hl>;
-            key-positions = <12 13>;
+            key-positions = <12 13 11>;
             layers = <4>;
         };
 
@@ -97,6 +97,12 @@
         redo {
             bindings = <&kp LS(LG(Z))>;
             key-positions = <2 3>;
+        };
+
+        heptabase_del {
+            bindings = <&kp DEL>;
+            key-positions = <12 13>;
+            layers = <4>;
         };
     };
 
@@ -222,10 +228,10 @@
 
         heptabase {
             bindings = <
-             &hb_conv NUMBER_1                 &hb_conv NUMBER_2             &hb_conv NUMBER_3               &trans  &trans     &trans  &trans  &trans  &trans  &trans
-             &hml LEFT_SHIFT LG(LA(NUMBER_4))  &hml LEFT_CONTROL LA(LG(N5))  &hml LEFT_ALT LG(LA(NUMBER_6))  &trans  &kp LG(G)  &trans  &trans  &trans  &trans  &trans
-&hb_conv N0  &hb_conv N7                       &hb_conv N8                   &hb_conv N9                     &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
-                                                                             &trans                          &trans  &trans     &trans  &trans  &trans
+             &hb_conv NUMBER_1                 &hb_conv NUMBER_2             &hb_conv NUMBER_3               &trans     &trans     &trans  &trans  &trans  &trans  &trans
+             &hml LEFT_SHIFT LG(LA(NUMBER_4))  &hml LEFT_CONTROL LA(LG(N5))  &hml LEFT_ALT LG(LA(NUMBER_6))  &trans     &kp LG(G)  &trans  &trans  &trans  &trans  &trans
+&hb_conv N0  &hb_conv N7                       &hb_conv N8                   &hb_conv N9                     &kp C      &kp V      &trans  &trans  &trans  &trans  &trans  &trans
+                                                                             &kp ESCAPE                      &kp SPACE  &kp ENTER  &trans  &trans  &trans
             >;
 
             label = "HEPTABASE";
