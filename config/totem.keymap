@@ -149,7 +149,7 @@
             bindings =
                 <&macro_press>,
                 <&kp LCMD &kp LEFT_ALT &macro_param_1to1>,
-                <&macro_press>,
+                <&macro_tap>,
                 <&kp MACRO_PLACEHOLDER>,
                 <&macro_release>,
                 <&kp LCMD &kp LEFT_ALT>;
@@ -222,10 +222,10 @@
 
         heptabase {
             bindings = <
-             &hb_conv NUMBER_1  &hb_conv NUMBER_2  &hb_conv NUMBER_3  &trans  &trans     &trans  &trans  &trans  &trans  &trans
-             &hb_conv NUMBER_4  &hb_conv N5        &hb_conv NUMBER_6  &trans  &kp LG(G)  &trans  &trans  &trans  &trans  &trans
-&hb_conv N0  &hb_conv N7        &hb_conv N8        &hb_conv N9        &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
-                                                   &trans             &trans  &trans     &trans  &trans  &trans
+             &hb_conv NUMBER_1                 &hb_conv NUMBER_2             &hb_conv NUMBER_3               &trans  &trans     &trans  &trans  &trans  &trans  &trans
+             &hml LEFT_SHIFT LG(LA(NUMBER_4))  &hml LEFT_CONTROL LA(LG(N5))  &hml LEFT_ALT LG(LA(NUMBER_6))  &trans  &kp LG(G)  &trans  &trans  &trans  &trans  &trans
+&hb_conv N0  &hb_conv N7                       &hb_conv N8                   &hb_conv N9                     &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
+                                                                             &trans                          &trans  &trans     &trans  &trans  &trans
             >;
 
             label = "HEPTABASE";
