@@ -108,7 +108,7 @@
         };
 
         switch_lang {
-            bindings = <&kp LC(SPACE)>;
+            bindings = <&kp CAPS>;
             key-positions = <34 35>;
         };
     };
