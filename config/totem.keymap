@@ -92,17 +92,24 @@
         undo {
             bindings = <&kp LG(Z)>;
             key-positions = <0 1>;
+            require-prior-idle-ms = <100>;
         };
 
         redo {
             bindings = <&kp LS(LG(Z))>;
             key-positions = <2 3>;
+            require-prior-idle-ms = <100>;
         };
 
         heptabase_del {
             bindings = <&kp DEL>;
             key-positions = <12 13>;
             layers = <4>;
+        };
+
+        switch_lang {
+            bindings = <&kp LC(SPACE)>;
+            key-positions = <34 35>;
         };
     };
 
